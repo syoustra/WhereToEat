@@ -1,0 +1,68 @@
+Fall 2016 Code Louisville PHP Project
+
+The application is designed to answer the inevitable "Where Do We Want To Go Eat" question, which virtually always results in a visit to the same restaurant that was just visited, because it's freshest in the mind. It will allow the user to create a list of restaurants, and then have one randomly selected when it comes to DiningDecisionTime.
+
+
+THE PLAN IS .....
+
+	The initial/home screen will have two buttons: one for "Hungry?" that will suggest a random restaurant, and one for "Preparing", which will access the database for adding or editing  the listing of restaurant options. 
+
+	Restaurants will be fully randomly selected, or may be limited by options such as cuisine, neighborhood, or "New to me".
+
+	
+Pages will be:
+	Index page, with two links
+	Selection page, displaying the random restaurant option
+	Directory page, listing all the restaurants (with option to add/edit)
+	Edit page, with form to add/edit restaurant entries
+
+
+
+Files needed:
+	connection
+	header
+	footer
+
+	css
+	js
+	img
+
+	index
+	selection
+	directory
+	edit
+
+	database
+
+
+
+The database will ultimately contain the following fields (not necessarily in this order):
+	RestID				SERIAL						Primary ID
+	restName			VARCHAR(40)
+	neighborhood	INT(3)						neighborhoodID from other table
+	cuisine				INT(3)						cuisineID from other table
+	rating				INT(1)
+
+	curbside			ENUM("yes","no")	checkbox; curbside pickup?
+	newToMe				ENUM("yes","no")	checkbox
+	happyHour			ENUM("yes","no")	checkbox; daily specials?
+
+	street				VARCHAR(50)
+	city					INT(3)						cityID from other table
+	state					CHAR(2)
+	zip						CHAR(10)
+	phone					CHAR(10)
+	webAddress		VARCHAR(50)
+	menuURL				VARCHAR(50)
+	orderURL			VARCHAR(50)
+	facebook			VARCHAR(50)				OR LESS ... if just the personalized URL can be stored for direct link
+	twitter				VARCHAR(40)				OR LESS ... if just the username can be stored for direct link
+	notes					TEXT							for comments, dishes to try, etc
+
+
+Related tables:
+	Neighborhood
+	City
+	Cuisine
+
+
