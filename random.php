@@ -12,11 +12,11 @@ echo "<h1>EAT UP!!!!!</h1>";
 
 
 //CHOOSES SINGLE RANDOMIZED ELEMENT
-$random = $db->query('SELECT cuisine FROM cuisine ORDER BY RAND() LIMIT 1');
+$random = $db->query('SELECT rest_name FROM restaurants ORDER BY RAND() LIMIT 1');
 $choice = $random->fetch();
 
 //DISPLAYS SELECTION
-echo "Then why don't you go eat some " . $choice[0] . "?";
+echo "Then why don't you go visit " . $choice[0] . "?";
 
 
 include("inc/footer.php"); 
