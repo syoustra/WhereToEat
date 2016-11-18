@@ -20,6 +20,7 @@ Pages will be:
 
 Files needed:
 	connection
+	credentials
 	header
 	footer
 
@@ -41,11 +42,13 @@ The database will ultimately contain the following fields (not necessarily in th
 	restName			VARCHAR(40)
 	neighborhood	INT(3)						neighborhoodID from other table
 	cuisine				INT(3)						cuisineID from other table
+
 	rating				INT(1)
 
 	curbside			ENUM("yes","no")	checkbox; curbside pickup?
 	newToMe				ENUM("yes","no")	checkbox
 	happyHour			ENUM("yes","no")	checkbox; daily specials?
+	local					ENUM("yes","no")	checkbox
 
 	street				VARCHAR(50)
 	city					INT(3)						cityID from other table
@@ -66,3 +69,20 @@ Related tables:
 	Cuisine
 
 
+
+HTML Form Page:
+	Bootstrap/Responsive
+	Check if restaurant is already stored
+	Input into database
+	Sanitize input
+	Strip Facebook & Twitter (to get just username)
+	Accommodate multiple neighborhoods/cuisines
+	Required fields
+	Dropdown for neighborhood/cuisine (from database)
+
+Directory Page:
+	Bootstrap/Responsive
+	Pull from database
+	Edit button --> pre-populated entry form page
+	Delete button -- WITH CONFIRMATION
+	Sortable columns
