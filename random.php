@@ -11,8 +11,13 @@ include("inc/connection.php");
 <!--Google tells me there are faster/better ways of doing this. By the time the database gets big enough for those concerns to be an issue, I should be able to understand and implement them.-->
 
 <?php 
-$random = $db->query('SELECT cuisine FROM cuisine ORDER BY RAND() LIMIT 1')->fetch();
-print "$random[0]";
+
+//CHOOSES SINGLE RANDOMIZED ELEMENT
+$random = $db->query('SELECT cuisine FROM cuisine ORDER BY RAND() LIMIT 1');
+$choice = $random->fetch();
+
+//DISPLAYS SELECTION
+echo "Then why don't you go eat some " . $choice[0] . "?";
 
 ?>
 
