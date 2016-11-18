@@ -19,4 +19,6 @@ $choice = $random->fetch();
 echo "Then why don't you go eat some " . $choice[0] . "?";
 
 
-include("inc/footer.php"); ?>
+include("inc/footer.php"); 
+
+?>
