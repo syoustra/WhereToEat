@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "PHProject";
 include("inc/header.php");
-include("inc/connection.php")
+include("inc/connection.php");
 ?>
 
 

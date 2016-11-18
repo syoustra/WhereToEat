@@ -9,8 +9,7 @@ require("credentials.php");
 try{
 	$db = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 	$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-echo "Database connection made";
+	//echo "Database connection made";
 
 } catch (Exception $e) {
 	echo "Unable to connect";
