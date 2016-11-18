@@ -43,9 +43,6 @@ echo "<h2>What would you like to change?</h2>";
 
 
 
-Restaurant Name: <input type="text" name="name">
-</form>
-
 
 
 <?php
