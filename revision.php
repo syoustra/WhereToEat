@@ -1,6 +1,8 @@
 <?php
 $pageTitle = "PHParsing";
 include("inc/header.php");
+include("inc/connection.php");
+
 
 
 echo "<h2>What would you like to change?</h2>";
@@ -15,19 +17,32 @@ echo "<h2>What would you like to change?</h2>";
       <input class="u-full-width" type="email" placeholder="MyNextFavoriteFoodPlace" id="exampleRestaurantInput">
     </div>
     <div class="five columns">
-      <label for="exampleNeighborhoodInput">Cuisine</label>
-      <select class="u-full-width" id="exampleNeighborhoodInput">
-        <option value="Option 1">Italian</option>
-        <option value="Option 2">Pizza</option>
-        <option value="Option 3">Pasta</option>
+      <label for="exampleCuisineInput">Cuisine</label>
+      <select class="u-full-width" id="exampleCuisineInput">
+
+<!--POPULATE CUISINE DROPDOWN LIST WITH DATABASE OPTIONS-->
+      	<?php
+      		$cuisineList = $db->query('SELECT cuisine FROM cuisine');
+      		while($c=$cuisineList->fetch())
+      		{
+      			echo "<option value='$c[0]'> $c[0] </option>";
+      		}
+      	?>
       </select>
+
     </div>
     <div class="six columns">
       <label for="exampleNeighborhoodInput">Neighborhood</label>
       <select class="u-full-width" id="exampleNeighborhoodInput">
-        <option value="Option 1">Highlands</option>
-        <option value="Option 2">Not-Highlands</option>
-        <option value="Option 3">Ummm.....what's left?</option>
+
+<!--POPULATE NEIGHBORHOOD DROPDOWN LIST WITH DATABASE OPTIONS-->
+      	<?php
+      		$neighborhoodList = $db->query('SELECT neighborhood_name FROM neighborhood');
+      		while($n=$neighborhoodList->fetch())
+      		{
+      			echo "<option value='$n[0]'> $n[0] </option>";
+      		}
+      	?>
       </select>
     </div>
   </div>
