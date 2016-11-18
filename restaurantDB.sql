@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2016 at 07:23 AM
+-- Generation Time: Nov 18, 2016 at 09:07 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -101,23 +101,13 @@ INSERT INTO `restaurants` (`rest_id`, `rest_name`, `neighborhood_id`, `cuisine_i
 (1, 'For Goodness Crepes', 13, 10, 'no'),
 (2, 'Simply Thai', 3, 9, 'no'),
 (3, '&quot;', 0, 0, ''),
-(4, '&quot;', 0, 0, ''),
-(5, 'sfd', 0, 0, ''),
-(6, 'sfd', 0, 0, ''),
 (7, 'sfd', 0, 0, ''),
 (8, 'test', 0, 0, 'no'),
 (9, 'FABD', 3, 8, 'no'),
-(10, 'FABDs', 0, 0, 'no'),
 (11, 'FABDs', 0, 0, 'no'),
-(12, 'FABDs', 0, 0, 'no'),
-(13, 'FABDs', 0, 0, 'no'),
-(14, 'FABDs', 0, 0, 'no'),
-(15, 'FABDs', 0, 0, 'no'),
-(16, 'FABDs', 0, 0, 'no'),
 (17, '$testing&quot;&lt;bold&gt;', 0, 0, 'no'),
 (18, 'pleaseworkpleaseworkpleasework', 0, 0, 'no'),
-(19, 'pleaseworkpleaseworkpleaseworkPLEASE!!!!', 0, 0, 'no'),
-(20, 'bsdbsd', 0, 0, 'no');
+(19, 'pleaseworkpleaseworkpleaseworkPLEASE!!!!', 0, 0, 'no');
 
 --
 -- Indexes for dumped tables
