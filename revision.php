@@ -19,10 +19,11 @@ echo "<h2>What would you like to change?</h2>";
     <div class="five columns">
       <label for="exampleCuisineInput">Cuisine</label>
       <select class="u-full-width" id="exampleCuisineInput">
+      		<option value=''>Select ...</option>
 
 <!--POPULATE CUISINE DROPDOWN LIST WITH DATABASE OPTIONS-->
       	<?php
-      		$cuisineList = $db->query('SELECT cuisine FROM cuisine');
+      		$cuisineList = $db->query('SELECT cuisine FROM cuisine ORDER BY cuisine');
       		while($c=$cuisineList->fetch())
       		{
       			echo "<option value='$c[0]'> $c[0] </option>";
@@ -34,10 +35,10 @@ echo "<h2>What would you like to change?</h2>";
     <div class="six columns">
       <label for="exampleNeighborhoodInput">Neighborhood</label>
       <select class="u-full-width" id="exampleNeighborhoodInput">
-
+      		<option value=''>Select ...</option>
 <!--POPULATE NEIGHBORHOOD DROPDOWN LIST WITH DATABASE OPTIONS-->
       	<?php
-      		$neighborhoodList = $db->query('SELECT neighborhood_name FROM neighborhood');
+      		$neighborhoodList = $db->query('SELECT neighborhood_name FROM neighborhood ORDER BY neighborhood_name');
       		while($n=$neighborhoodList->fetch())
       		{
       			echo "<option value='$n[0]'> $n[0] </option>";
