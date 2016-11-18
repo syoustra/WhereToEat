@@ -53,7 +53,7 @@ echo "<h2>What would you like to change?</h2>";
 <!--   <label for="exampleMessage">Message</label>
   <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
  -->  <label class="NewToMeInput">
-    <input type="checkbox">
+    <input type="checkbox" id="NewToMeInput" name="NewToMeInput">
     <span class="label-body">This place is new to me.</span>
   </label>
   <input class="button-primary" type="submit" value="Submit">
