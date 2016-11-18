@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2016 at 03:22 AM
+-- Generation Time: Nov 18, 2016 at 12:43 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -44,7 +44,7 @@ INSERT INTO `cuisine` (`cuisine_id`, `cuisine`) VALUES
 (6, 'Sushi'),
 (7, 'American'),
 (8, 'Pub Fare'),
-(9, 'Indian'),
+(9, 'Asian'),
 (10, 'Breakfast');
 
 -- --------------------------------------------------------
@@ -96,7 +96,8 @@ CREATE TABLE `restaurants` (
 --
 
 INSERT INTO `restaurants` (`rest_id`, `rest_name`, `neighborhood_id`, `cuisine_id`, `new_to_me`) VALUES
-(1, 'For Goodness Crepes', 13, 10, 'no');
+(1, 'For Goodness Crepes', 13, 10, 'no'),
+(2, 'Simply Thai', 3, 9, 'no');
 
 --
 -- Indexes for dumped tables
@@ -141,7 +142,7 @@ ALTER TABLE `neighborhood`
 -- AUTO_INCREMENT for table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `rest_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `rest_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
