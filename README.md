@@ -22,3 +22,4 @@ Database access:
 Current batch of issues/curiosities...
 *	All restaurants are added to the database and subject to random selection, but don't show up in directory
 * Can't get dropdown boxes converted back to the ids needed for the database entry
+Methinks the two are related ... that once I figure out the dropdown connection, the rest will fall into place. Forcing default values in the form (and database) doesn't seem to help, though.

@@ -7,6 +7,8 @@ include("inc/connection.php");
 //var_dump($_POST);
 
 //CHECK TO ENSURE THAT THE FORM WAS ACTUALLY FILLED OUT IN ITS ENTIRETY
+
+// **************************MOOT POINT, ONCE I ALLOWED NULL RESPONSES IN AN ATTEMPT TO GET FORM TO WORK WITH DIRECTORY*****************
 if (!isset($_POST['RestaurantInput']) || !isset($_POST['CuisineInput']) || !isset($_POST['NeighborhoodInput']) ) 
 {
 	echo "<p>Please go back and fill out the form completely.</p>";

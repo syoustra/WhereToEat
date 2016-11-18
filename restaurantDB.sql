@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2016 at 12:43 AM
+-- Generation Time: Nov 18, 2016 at 07:23 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -45,7 +45,8 @@ INSERT INTO `cuisine` (`cuisine_id`, `cuisine`) VALUES
 (7, 'American'),
 (8, 'Pub Fare'),
 (9, 'Asian'),
-(10, 'Breakfast');
+(10, 'Breakfast'),
+(11, ' ');
 
 -- --------------------------------------------------------
 
@@ -75,7 +76,8 @@ INSERT INTO `neighborhood` (`neighborhood_id`, `neighborhood_name`) VALUES
 (10, 'Fourth Street'),
 (11, 'Fern Valley'),
 (12, 'Iroquois'),
-(13, 'Original Highlands');
+(13, 'Original Highlands'),
+(14, ' ');
 
 -- --------------------------------------------------------
 
@@ -86,9 +88,9 @@ INSERT INTO `neighborhood` (`neighborhood_id`, `neighborhood_name`) VALUES
 CREATE TABLE `restaurants` (
   `rest_id` bigint(20) UNSIGNED NOT NULL,
   `rest_name` varchar(40) NOT NULL,
-  `neighborhood_id` int(3) NOT NULL,
-  `cuisine_id` int(3) NOT NULL,
-  `new_to_me` enum('yes','no') NOT NULL
+  `neighborhood_id` int(3) DEFAULT '14',
+  `cuisine_id` int(3) DEFAULT '11',
+  `new_to_me` enum('yes','no') DEFAULT 'no'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -97,7 +99,25 @@ CREATE TABLE `restaurants` (
 
 INSERT INTO `restaurants` (`rest_id`, `rest_name`, `neighborhood_id`, `cuisine_id`, `new_to_me`) VALUES
 (1, 'For Goodness Crepes', 13, 10, 'no'),
-(2, 'Simply Thai', 3, 9, 'no');
+(2, 'Simply Thai', 3, 9, 'no'),
+(3, '&quot;', 0, 0, ''),
+(4, '&quot;', 0, 0, ''),
+(5, 'sfd', 0, 0, ''),
+(6, 'sfd', 0, 0, ''),
+(7, 'sfd', 0, 0, ''),
+(8, 'test', 0, 0, 'no'),
+(9, 'FABD', 3, 8, 'no'),
+(10, 'FABDs', 0, 0, 'no'),
+(11, 'FABDs', 0, 0, 'no'),
+(12, 'FABDs', 0, 0, 'no'),
+(13, 'FABDs', 0, 0, 'no'),
+(14, 'FABDs', 0, 0, 'no'),
+(15, 'FABDs', 0, 0, 'no'),
+(16, 'FABDs', 0, 0, 'no'),
+(17, '$testing&quot;&lt;bold&gt;', 0, 0, 'no'),
+(18, 'pleaseworkpleaseworkpleasework', 0, 0, 'no'),
+(19, 'pleaseworkpleaseworkpleaseworkPLEASE!!!!', 0, 0, 'no'),
+(20, 'bsdbsd', 0, 0, 'no');
 
 --
 -- Indexes for dumped tables
@@ -132,17 +152,17 @@ ALTER TABLE `restaurants`
 -- AUTO_INCREMENT for table `cuisine`
 --
 ALTER TABLE `cuisine`
-  MODIFY `cuisine_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cuisine_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `neighborhood`
 --
 ALTER TABLE `neighborhood`
-  MODIFY `neighborhood_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `neighborhood_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `rest_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `rest_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
