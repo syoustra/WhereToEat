@@ -10,15 +10,18 @@ echo "<h2>What would you like to change?</h2>";
 ?>
 <!--ENTER FORM DATA HERE-->
 
-<form>
+
+
+
+<form action="restaurant_added.php" method="post">
   <div class="row">
     <div class="twelve columns">
-      <label for="exampleRestaurantInput">Restaurant Name</label>
-      <input class="u-full-width" type="email" placeholder="MyNextFavoriteFoodPlace" id="exampleRestaurantInput">
+      <label for="RestaurantInput">Restaurant Name</label>
+      <input class="u-full-width" type="text" placeholder="MyNextFavoriteFoodPlace" id="RestaurantInput" name="RestaurantInput">
     </div>
     <div class="five columns">
-      <label for="exampleCuisineInput">Cuisine</label>
-      <select class="u-full-width" id="exampleCuisineInput">
+      <label for="CuisineInput">Cuisine</label>
+      <select class="u-full-width" id="CuisineInput" name="CuisineInput">
       		<option value=''>Select ...</option>
 
 <!--POPULATE CUISINE DROPDOWN LIST WITH DATABASE OPTIONS-->
@@ -33,8 +36,8 @@ echo "<h2>What would you like to change?</h2>";
 
     </div>
     <div class="six columns">
-      <label for="exampleNeighborhoodInput">Neighborhood</label>
-      <select class="u-full-width" id="exampleNeighborhoodInput">
+      <label for="NeighborhoodInput">Neighborhood</label>
+      <select class="u-full-width" id="NeighborhoodInput" name="NeighborhoodInput">
       		<option value=''>Select ...</option>
 <!--POPULATE NEIGHBORHOOD DROPDOWN LIST WITH DATABASE OPTIONS-->
       	<?php
@@ -49,7 +52,7 @@ echo "<h2>What would you like to change?</h2>";
   </div>
 <!--   <label for="exampleMessage">Message</label>
   <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
- -->  <label class="exampleNewToMe">
+ -->  <label class="NewToMeInput">
     <input type="checkbox">
     <span class="label-body">This place is new to me.</span>
   </label>
