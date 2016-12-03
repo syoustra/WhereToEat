@@ -1,10 +1,12 @@
 <?php
 
 //File containing the PDO credentials; part of .gitignore for security's sake
-// $db = new PDO("mysql:host=localhost;dbname=database;port=3306", "root", "");
+// $db = new PDO("mysql:host=HOSTNAME;dbname=database;port=3306", "USERNAME", "PASSWORD");
 
-	$host = 'localhost';
+	$host = 'INSERT_HOSTNAME_HERE';
 	$db = 'restaurantDB';
-	$user = 'root';
-	$pass = '';
+	$user = 'INSERT_USERNAME_HERE';
+	$pass = 'INSERT_PASSWORD_HERE';
+
+
 
