@@ -2,7 +2,7 @@
 
 Random Restaurant Picker -- PHP Project for Code Louisville
 
-A bare-bones answer to the perennial question of "Where Should We Eat Tonight?" ... randomly selecting a restaurant from a previously-populated database
+A bare-bones answer to the perennial question of "Where Should We Eat Tonight?" ... randomly selecting a restaurant from a previously-populated database.
 Further development will bring more in-depth searchable information to the database (as roughly sketched in the Project_Outline), as well as fixing the Edit and Delete options
 
 
@@ -16,7 +16,7 @@ To test this application:
 Database access:
 *	The file is restaurantDB.sql, in the root folder
 *	The PDO connection is the inc folder
-*	Create an appropriate credentials.php file in the inc folder for your particular system
+*	RENAME credentials_template.php file in the inc folder as "credentials.php", and edit it for your particular system
 
 
 Current batch of issues/curiosities...
