@@ -16,7 +16,12 @@ To test this application:
 Database access:
 *	The file is restaurantDB.sql, in the root folder
 *	The PDO connection is the inc folder
-*	RENAME credentials_template.php file in the inc folder as "credentials.php", and edit it for your particular system
+TWO OPTIONS:
+* Edit the inc/credentials.php file
+*	OR ...... RENAME credentials_template.php file in the inc folder as "credentials.php", and edit it for your particular system
+
+(I kept the credentials in the repo while also in .gitignore by doing 
+     git update-index --assume-unchanged inc/credentials.php)
 
 
 Current batch of issues/curiosities...
